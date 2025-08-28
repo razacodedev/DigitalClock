@@ -13,13 +13,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0f172a;
+  padding: 10px;
 }
 
 .clock-container {
   text-align: center;
   color: white;
+  width: 100%;
+  max-width: 400px;
 }
 
 .clock-container h1 {
@@ -36,10 +39,34 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+/* Clock Span */
 .clock-style span {
   display: inline-block;
   min-width: 40px;
   text-align: center;
+}
+
+/* ====== Mobile Responsive ====== */
+@media screen and (max-width: 480px) {
+  .clock-container h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .clock-style {
+    padding: 12px 15px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+
+  .clock-style span {
+    min-width: 32px;
+  }
 }
